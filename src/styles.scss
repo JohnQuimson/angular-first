@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/variables.scss";
+
 html,
 body,
 p,
@@ -48,6 +50,16 @@ app-root {
 
 .gap-2 {
   gap: 2rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
 .space-between {
