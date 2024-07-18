@@ -20,7 +20,7 @@
     <!-- immagine -->
     <div class="row gap-05">
       <span class="price-label">Immagine:</span>
-      <input type="text" [(ngModel)]="product.image" />
+      <input type="file" [(ngModel)]="product.image" />
     </div>
 
     <!-- rating -->
@@ -33,19 +33,22 @@
   </div>
 
   <p-footer>
-    <button
-      type="button"
-      pButton
-      icon="pi pi-check"
-      (click)="onConfirm()"
-      label="Confirm"
-    ></button>
+    <!-- delete -->
     <button
       type="pButton"
       pButton
       icon="pi pi-times"
       (click)="onCancel()"
       label="Cancel"
+    ></button>
+
+    <!-- conferma -->
+    <button
+      type="button"
+      pButton
+      icon="pi pi-check"
+      (click)="onConfirm()"
+      label="Confirm"
     ></button>
   </p-footer>
 </p-dialog>
