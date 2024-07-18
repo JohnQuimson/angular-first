@@ -12,6 +12,8 @@ import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { ConfirmationService } from 'primeng/api';
+import { PricePipe } from '../../pipes/price.pipe';
+import { TruncateNamePipe } from '../../pipes/truncate-name.pipe';
 
 @Component({
   selector: 'app-product',
@@ -22,6 +24,8 @@ import { ConfirmationService } from 'primeng/api';
     ButtonModule,
     ToastModule,
     ConfirmPopupModule,
+    PricePipe,
+    TruncateNamePipe,
   ],
   providers: [ConfirmationService],
   templateUrl: './product.component.html',
@@ -35,14 +39,6 @@ export class ProductComponent {
   @Input() product!: Product;
   @Output() edit: EventEmitter<Product> = new EventEmitter<Product>();
   @Output() delete: EventEmitter<Product> = new EventEmitter<Product>();
-
-  truncateName(name: string) {
-    if (name.length > 20) {
-      return name.slice(0, 20) + '...';
-    }
-
-    return name;
-  }
 
   editProduct() {
     this.edit.emit(this.product);
