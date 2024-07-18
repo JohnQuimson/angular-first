@@ -44,6 +44,10 @@ app-root {
   margin-bottom: 25px;
 }
 
+.px-15 {
+  padding: 0 15px;
+}
+
 .wrap {
   flex-wrap: wrap;
 }
@@ -72,6 +76,10 @@ app-root {
 
 .space-between {
   justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
 }
 
 .align-center {
